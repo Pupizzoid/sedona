@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Vita Kozlovska](https://up.htmlacademy.ru/htmlcss/26/user/1007143).
-* Наставник: `Неизвестно`.
+* Наставник: [Степан Клочко](https://htmlacademy.ru/profile/id1149105).
 
 ---
 

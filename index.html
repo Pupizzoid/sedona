@@ -5,6 +5,7 @@
     <title>Седона</title>
   </head>
   <body>
+
     <header>
       <a href="index.html">
         <img src="img/svg-sedona/logo-sedona.svg" width="140" height="72" alt="index_logo»">
@@ -18,6 +19,7 @@
         </ul>
       </nav>
     </header>
+
     <main>
       <div>
          <img src="img/welcome.png"  width="459" height="353" alt="Welcome">
@@ -34,9 +36,9 @@
       </section>
 
       <section>
-        <h2>Переимущества</h2>
+        <h2 class="visually-hidden">Переимущества</h2>
         <div>
-          <img src="img/Layer_10.jpg" width="800" height="256" alt="photo">
+          <img src="img/Layer_10.jpg" width="800" height="256" alt="Sedona photo">
           <h3>Настоящий городок</h3>
           <span>— №1 —</span>
           <p>
@@ -64,7 +66,7 @@
           </ul>
         </div>
         <div>
-          <img src="img/Layer_5.jpg" width="800" height="256" alt="photo">
+          <img src="img/Layer_5.jpg" width="800" height="256" alt=" bridge photo">
           <h3>Там есть Мост дьявола</h3>
           <span>— №2 —</span>
           <p>
@@ -75,42 +77,60 @@
           <h3>Небольшая площадь</h3>
           <span>— №3 —</span>
           <p>
-            Все достопримечательности 
-            находятся очень близко
+            Все достопримечательности  находятся очень близко
           </p>
         </div>
         <div>
           <h3>Красивая дорога</h3>
           <span>— №4 —</span>
           <p>
-            Ехать в Седону из Лас-Вегаса совсем
-            не скучно
+            Ехать в Седону из Лас-Вегаса совсем не скучно
           </p>
         </div>
         <div>
           <h3>Мало туристов</h3>
           <span>— №5 —</span>
           <p>
-             Большинство едет в гранд каньон
-             и толпится там
+             Большинство едет в гранд каньон и толпится там
           </p>
         </div>
       </section>
 
       <section>
-        <h2> Форма бронирования</h2>
+        <h2 class="visually-hidden"> Форма бронирования</h2>
         <p>
           <span>Заинтересовались?</span> Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в седоне
         </p>
         <button type="button">Поиск гостинницы в Седоне</button>
-        <!-- Будет форма -->
+        <form action="#" method="POST">
+          <p>
+            <label for="arrive-date">Дата заезда</label>
+            <input type="date" name="arrive-date" id="arrive-date" placeholder="24 апреля 2017">
+          </p>
+          <p>
+            <label for="departure-date">Время выезда</label>
+            <input type="date" name="departure-date" id="departure-date" placeholder="4 июля 2017">
+          </p>
+          <p>
+            <label for="adults">Взрослые</label>
+            <input type="number" min="0" max="100" step="1" name="adults" id="adults" placeholder="2">
+          </p>
+          <p>
+            <label for="children">
+              <input type="number" min="0" max="100" step="1" name="children" id="children" placeholder="0">
+            </label>
+          </p>
+          <a href="#">Найти</a>
+        </form>
       </section>
+
       <section>
-        <h2>Карта проезда</h2>
+        <h2 class="visually-hidden">Карта проезда</h2>
         <img src="img/map.png" width="1200" height="594" alt="map">
       </section>
     </main>
+
     <footer>
       <p>
         #visitSEDONA

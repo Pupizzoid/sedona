@@ -23,83 +23,83 @@
     <main>
       <section>
         <h2 class="visually-hidden">Фильтр поиска</h2>
-        <fieldset>
-          <legend>Инфраструктура</legend>
-          <ul>
-            <li>
-              <input type="checkbox" name="swimming pool" id="filter-pool" checked>
-              <label for="filter-pool">Бассейн</label>
-            </li>
-            <li>
-              <input type="checkbox" name="parking" id="filter-parking">
-              <label for="filter-parking">Парковка</label>
-            </li>
-            <li>
-              <input type="checkbox" name="internet" id="filter-internet">
-              <label for="filter-internet">WI-FI</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <legend>Тип жилья</legend>
-          <ul>
-            <li>
-              <input type="checkbox" name="hotel" id="filter-hotel" checked>
-              <label for="filter-hotel">Гостинница</label>
-            </li>
-            <li>
-              <input type="checkbox" name="motel" id="filter-motel" checked>
-              <label for="filter-motel">Мотель</label>
-            </li>
-            <li>
-              <input type="checkbox" name="apartment" id="filter-apartment" checked>
-              <label for="filter-apartment">Апартаменты</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <legend>Стоимость в сутки (Р):</legend>
-          <table>
-            <caption class="visually-hidden">Границы стоимости</caption>
-            <tr>
-              <th>От 0</th>
-              <th>До 3000</th>
-            </tr>
-            <!-- <p>
-              <span>От 0</span> До 3000
-            </p> 
-          Думала еще по поводу такого варианта, но подумала что выбор цены важен и скрин ридеры увидят caption-->
-          </table>
-          <div>
-            <button type="button"></button>
-            <!-- svg -->
-            <button type="button"></button>
-            <!-- svg -->
-          </div>
-          <button type="submit">Показать</button>
-        </fieldset>
+        <form method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Инфраструктура</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="swimming pool" id="filter-pool" checked>
+                <label for="filter-pool">Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parking" id="filter-parking">
+                <label for="filter-parking">Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="internet" id="filter-internet">
+                <label for="filter-internet">WI-FI</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                <label for="filter-hotel">Гостинница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="motel" id="filter-motel" checked>
+                <label for="filter-motel">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="apartment" id="filter-apartment" checked>
+                <label for="filter-apartment">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+            <label>
+              от <input type="text" value="0">
+            </label>
+            <label>
+              от <input type="text" value="3000">
+            </label>
+            <div>
+              <div></div> <!-- слайдер -->
+              <span></span> <!-- маркер svg -->
+              <span></span> <!-- маркер svg -->
+            </div>
+            <button type="submit">Показать</button>
+          </fieldset>
+        </form>
+        <p>Найдено: 3</p>
         <div>
-          <h3>Найдено:</h3>
-          <output name="sum">3</output>
-          <!-- Посмотрела в Can I use там процент поддержки 69 процентов, стоит ли использовать? -->
+          <p>Сортировка</p>
+          <ul>
+            <li><a href="#">По цене</a>
+              <!-- Эти ссылки должны быть с href? Они же как бы никуда не ведут. Я делала их кнопками так как
+              понимаю что есть список отелей и если ты хочешь выбрать их по определенным критериям, то нужно 
+            отправлять запрос на сервер,  где произойдет сортировка  -->
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По рейтингу</a></li>
+          </ul>
         </div>
-        <div>
-            <h4>Сортировка</h4>
-            <button type="submit">По цене</button>
-            <button type="submit">По типу</button>
-            <button type="submit">По рейтингу</button>
-        </div>
-        <span></span>
-        <!-- svg -->
-        <span></span>
-        <!-- svg -->
+        <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" aria-label="Вверх списка">
+              <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+            </svg>
+          </a>
+        <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" aria-label="Вниз списка">
+              <path fill="#231F20" d="M5.5 10L0 0h11"/>
+            </svg>
+        </a>
       </section>
 
       <article>
-        <div>
-            <img src="img/hotel.jpg" width="135" height="90" alt="photo of Amara Resort & Spa">
-            <!-- Я убрала ссылку по картинке и теперь думаю нужна ли ей доп обертка? -->
-        </div>
+        <img src="img/hotel.jpg" width="135" height="90" alt="photo of Amara Resort & Spa">
         <div>
           <h3>
             <a href="#">Amara Resort & Spa</a>
@@ -116,9 +116,7 @@
       </article>
 
       <article>
-        <div>
-            <img src="img/motel.jpg" width="135" height="90" alt="photo of Desert Quail Inn">
-        </div>
+          <img src="img/motel.jpg" width="135" height="90" alt="photo of Desert Quail Inn">
         <div>
           <h3>
             <a href="#">Desert Quail Inn</a>
@@ -135,9 +133,7 @@
       </article>
 
       <article>
-        <div>
-            <img src="img/apartment.jpg" width="135" height="90" alt="photo of Villas at Poco Diablo">
-        </div>
+          <img src="img/apartment.jpg" width="135" height="90" alt="photo of Villas at Poco Diablo">
         <div>
           <h3>
             <a href="#">Villas at Poco Diablo</a>

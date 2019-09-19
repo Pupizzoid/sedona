@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <title>Гостинницы</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
-    <header>
-      <a href="index.html">
-        <img src="img/svg-sedona/logo-sedona.svg" width="140" height="72" alt="logotype Sedona city»">
-      </a>
-      <nav>
-        <ul>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a href="index.html" class="header-logo">
+          <img src="img/svg-sedona/logo-sedona.svg" width="140" height="72" alt="logotype Sedona city»">
+        </a>
+        <ul class="site-navigation">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
@@ -20,7 +22,7 @@
       </nav>
     </header>
 
-    <main>
+    <main class="container">
       <section>
         <h2 class="visually-hidden">Фильтр поиска</h2>
         <form method="get" action="https://echo.htmlacademy.ru">
@@ -28,7 +30,7 @@
             <legend>Инфраструктура</legend>
             <ul>
               <li>
-                <input type="checkbox" name="swimming pool" id="filter-pool" checked>
+                <input type="checkbox" name="swimming-pool" id="filter-pool" checked>
                 <label for="filter-pool">Бассейн</label>
               </li>
               <li>
@@ -74,92 +76,89 @@
             <button type="submit">Показать</button>
           </fieldset>
         </form>
-        <p>Найдено: 3</p>
         <div>
+          <p>Найдено: 3</p>
           <p>Сортировка</p>
           <ul>
             <li><a href="#">По цене</a>
-              <!-- Эти ссылки должны быть с href? Они же как бы никуда не ведут. Я делала их кнопками так как
-              понимаю что есть список отелей и если ты хочешь выбрать их по определенным критериям, то нужно 
-            отправлять запрос на сервер,  где произойдет сортировка  -->
             <li><a href="#">По типу</a></li>
             <li><a href="#">По рейтингу</a></li>
           </ul>
-        </div>
-        <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" aria-label="Вверх списка">
+          <a href="#" aria-label="Вверх списка">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
               <path fill="#231F20" d="M5.5 0L0 10h11z"/>
             </svg>
           </a>
-        <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" aria-label="Вниз списка">
+          <a href="#" aria-label="Вниз списка">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
               <path fill="#231F20" d="M5.5 10L0 0h11"/>
             </svg>
-        </a>
+          </a>
+        </div>
       </section>
 
-      <article>
+      <article class="hotel-item">
         <img src="img/hotel.jpg" width="135" height="90" alt="photo of Amara Resort & Spa">
-        <div>
+        <div class="hotel-info">
           <h3>
-            <a href="#">Amara Resort & Spa</a>
+            <a href="#" class="name-hotel">Amara Resort & Spa</a>
           </h3>
-          <p>
+          <p class="details-hotel">
             <span>Гостинница</span> от 4000 p.
           </p>
-          <a href="#">Подробнее</a>
-          <a href="#">Забронировать</a>
+          <a href="#" class="more-button">Подробнее</a>
+          <a href="#" class="booking-button">Забронировать</a>
         </div>
-        <div>
-          <span>Рейтинг: 8,5</span>
+        <div class="rating">
+          <span >Рейтинг: 8,5</span>
         </div>
       </article>
 
-      <article>
+      <article class="hotel-item">
           <img src="img/motel.jpg" width="135" height="90" alt="photo of Desert Quail Inn">
-        <div>
+        <div class="hotel-info">
           <h3>
-            <a href="#">Desert Quail Inn</a>
+            <a href="#" class="name-hotel">Desert Quail Inn</a>
           </h3>
-          <p>
+          <p class="details-hotel">
             <span>Мотель</span> от 3000 р.
           </p>
-          <a href="#">Подробнее</a>
-          <a href="#">Забронировать</a>
+          <a href="#" class="more-button">Подробнее</a>
+          <a href="#" class="booking-button">Забронировать</a>
         </div>
-        <div>
+        <div class="rating">
           <span>Рейтинг: 8,9</span>
         </div>
       </article>
 
-      <article>
+      <article class="hotel-item">
           <img src="img/apartment.jpg" width="135" height="90" alt="photo of Villas at Poco Diablo">
-        <div>
+        <div class="hotel-info">
           <h3>
-            <a href="#">Villas at Poco Diablo</a>
+            <a href="#" class="name-hotel">Villas at Poco Diablo</a>
           </h3>
-          <p>
+          <p class="details-hotel">
             <span>Апартаменты</span> от 2000 р.
           </p>
-          <a href="#">Подробнее</a>
-          <a href="#">Забронировать</a>
+          <a href="#" class="more-button">Подробнее</a>
+          <a href="#" class="booking-button">Забронировать</a>
         </div>
-        <div>
+        <div class="rating">
           <span>Рейтинг: 9,2</span>
         </div>
       </article>
     </main>
 
-    <footer>
-      <p>
+    <footer class="main-footer">
+      <p class="hashtag">
         #visitSEDONA
       </p>
-      <ul>
-        <li><a href="#" aria-label="Седона в Твитере">Twitter</a></li>
-        <li><a href="#" aria-label="Седона в Фейсбуке">Facebook</a></li>
-        <li><a href="#" aria-label="Седона в Ютубе">Youtube</a></li>
+      <ul class="footer-social">
+        <li class="social-button"><a href="#" aria-label="Седона в Твитере">Twitter</a></li>
+        <li class="social-button"><a href="#" aria-label="Седона в Фейсбуке">Facebook</a></li>
+        <li class="social-button"><a href="#" aria-label="Седона в Ютубе">Youtube</a></li>
       </ul>
-      <p>
+      <p class="footer-copyright">
         Website by
         <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Интенсив HTML academy">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.08 36.85" width="115" height="41">

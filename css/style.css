@@ -1,0 +1,253 @@
+a { text-decoration: none }
+
+ul{ list-style: none;}
+
+.button {
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+	border: none;
+	}
+/* навигация */
+.site-navigation {
+font-family: 'PT Sans', sans-serif;
+font-size: 14px;
+font-weight: 700;
+line-height: 26px;
+color: #000000;
+text-transform: uppercase;
+}
+
+.site-navigation a:hover {
+color: #81b3d2;
+}
+.site-navigation a:focus {
+ color: rgba(0, 0, 0, 0.3);
+
+}
+
+.site-navigation a:active { 
+color: #766357;
+}
+/* не могу поменять цвет активной ссылки */
+/* заставка */
+.welcome-photo {
+background-image: url("../img/background-photo.jpg");
+background-color: #87a7c8;
+background-repeat: no-repeat;
+}
+
+h1 {
+color: #000000;
+font-family: "PT Sans", sans-serif;
+font-size: 21px;
+font-weight: 700;
+line-height: 26px;
+text-transform: uppercase;
+text-align: center;
+}
+/* преимущества */
+.causes {
+color: #333333;
+font-family: "PT Sans", sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 26px;
+text-transform: uppercase;
+text-align: center;
+}
+/* бронирование */
+.reservation-info span {
+color: #000000;
+font-family: "PT Sans", sans-serif;
+font-size: 30px;
+font-weight: 700;
+line-height: 36px;
+text-transform: uppercase;
+text-align: center;
+}
+
+.reservation-info {
+color: #333333;
+font-family: "PT Sans",sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+text-transform: uppercase;
+text-align: center;
+}
+
+.reservation-form {
+color: #000000;
+font-family: "PT Sans", sans-serif;
+font-size: 14px;
+font-weight: 700;
+line-height: 26px;
+text-transform: uppercase;
+}
+.reservation-form input {
+background-color: #f2f2f2;
+border: none;
+color: #000000;
+font-family: "PT Sans", sans-serif;
+font-size: 14px;
+font-weight: 700;
+line-height: 26px;
+text-transform: uppercase;
+}
+
+.reservation-form input:hover {
+background-color: #ebebeb;
+}
+
+.reservation-form input:focus {
+background-color: #e5e5e5;
+}
+/* тоже не меняется цвет при фокусе */
+.button-search {
+color: #ffffff;
+font-family: "PT Sans", sans-serif;
+font-size: 21px;
+font-weight: 700;
+line-height: 26px;
+text-transform: uppercase;
+background-color: #81b3d2;
+}
+
+.button-search.button:hover {
+background-color: #669ec0;
+}
+
+.button-search.button:focus {
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #5496bd;
+}
+
+.button-popup {
+color: #ffffff;
+font-family: "PT Sans", sans-serif;
+font-size: 21px;
+font-weight: 700;
+line-height: 26px;
+text-transform: uppercase;
+background-color: #766357;
+}
+
+.button-popup.button:hover,
+.button-popup.button:focus {
+background-color: #604e43;
+}
+.button-popup.button:focus {
+color:rgba(255, 255, 255, 0.3);
+background-color:  #503e33;
+}
+
+/* футер */
+.main-footer {
+background-color: #f9fbf6;
+}
+
+.hashtag{
+color: #000000;
+font-family: "PT Sans",sans-serif;
+font-size: 21px;
+font-weight: 700;
+line-height: 26px;
+text-transform: uppercase;
+text-align: center;
+}
+
+.footer-social {
+text-align: center;
+}
+
+
+.footer-copyright {
+color: #000000;
+font-family: "PT Sans", sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 26px;
+text-transform: uppercase;
+text-align: center;
+}
+
+/* каталог */
+
+.name-hotel {
+color: #000000;
+font-family: "PT Sans",sans-serif;
+font-size: 21px;
+font-weight: 700;
+line-height: 26px;
+text-transform: uppercase;
+}
+
+.name-hotel:hover {
+color: #81b3d2;
+}
+
+.name-hotel:focus {
+color: rgba(0, 0, 0, 0.3);
+}
+
+.details-hotel {
+color: #333333;
+font-family: "PT Sans",sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+text-transform: uppercase;
+}
+
+.more-button{
+color: #ffffff;
+font-family: "PT Sans",sans-serif;
+font-size: 14px;
+font-weight: 700;
+line-height: 21px;
+text-transform: uppercase;
+background-color: #81b3d2;
+}
+
+.booking-button{
+color: #ffffff;
+font-family: "PT Sans", sans-serif;
+font-size: 14px;
+font-weight: 700;
+line-height: 21px;
+text-transform: uppercase;
+background-color: #766357;
+}
+
+.more-button:hover {
+background-color: #669ec0;
+}
+
+.more-button:focus {
+color: rgba(255, 255, 255, 0.3);
+background-color: #5496bd;
+}
+
+.booking-button:hover {
+background-color: #604e43;
+}
+
+.booking-button:focus {
+background-color: #503e33;
+color:rgba(255, 255, 255, 0.3);
+}
+
+.rating span {
+color: #666666;
+font-family: "PT Sans", sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+text-transform: uppercase;
+background-color: #f2f2f2;
+}
+
+
+
+

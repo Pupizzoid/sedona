@@ -1,253 +1,261 @@
-a { text-decoration: none }
+html {
+	box-sizing: border-box;
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
 
-ul{ list-style: none;}
+body {
+	font-family: 'PT Sans', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	/*  */
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+  text-decoration: none
+}
 
 .button {
-	text-align: center;
-	vertical-align: middle;
-	text-transform: uppercase;
-	border: none;
-	}
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  font: inherit;
+}
+
+nav ul, 
+section ul,
+footer ul {
+	list-style: none;
+}
+
 /* навигация */
+
 .site-navigation {
-font-family: 'PT Sans', sans-serif;
-font-size: 14px;
-font-weight: 700;
-line-height: 26px;
-color: #000000;
-text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
 }
 
 .site-navigation a:hover {
-color: #81b3d2;
+  color: #81b3d2;
 }
+
 .site-navigation a:focus {
- color: rgba(0, 0, 0, 0.3);
-
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation a:active { 
-color: #766357;
+.site-navigation a:active {
+  color: #766357;
 }
-/* не могу поменять цвет активной ссылки */
-/* заставка */
+
 .welcome-photo {
-background-image: url("../img/background-photo.jpg");
-background-color: #87a7c8;
-background-repeat: no-repeat;
+  background-image: url("../img/background-photo.jpg");
+  background-color: #87a7c8;
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 
 h1 {
-color: #000000;
-font-family: "PT Sans", sans-serif;
-font-size: 21px;
-font-weight: 700;
-line-height: 26px;
-text-transform: uppercase;
-text-align: center;
+  color: #000000;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
 }
+
 /* преимущества */
+
 .causes {
-color: #333333;
-font-family: "PT Sans", sans-serif;
-font-size: 14px;
-font-weight: 400;
-line-height: 26px;
-text-transform: uppercase;
-text-align: center;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
 }
+
+.advantages-list h3,
+.features-list h4 {
+	font-size: 21px;
+	line-height: 21px;
+	color: #000000;
+	font-weight: 700;
+}
+
+.advantages-list p {
+	font-size: 14px;
+	line-height: 21px;
+	color: #000000;
+	font-weight: 400;
+}
+
+.features-list p {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #333333;
+}
+
 /* бронирование */
+
 .reservation-info span {
-color: #000000;
-font-family: "PT Sans", sans-serif;
-font-size: 30px;
-font-weight: 700;
-line-height: 36px;
-text-transform: uppercase;
-text-align: center;
+  color: #000000;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
 }
 
 .reservation-info {
-color: #333333;
-font-family: "PT Sans",sans-serif;
-font-size: 14px;
-font-weight: 400;
-line-height: 24px;
-text-transform: uppercase;
-text-align: center;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .reservation-form {
-color: #000000;
-font-family: "PT Sans", sans-serif;
-font-size: 14px;
-font-weight: 700;
-line-height: 26px;
-text-transform: uppercase;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
 }
+
 .reservation-form input {
-background-color: #f2f2f2;
-border: none;
-color: #000000;
-font-family: "PT Sans", sans-serif;
-font-size: 14px;
-font-weight: 700;
-line-height: 26px;
-text-transform: uppercase;
+  background-color: #f2f2f2;
+  border: none;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
 }
 
 .reservation-form input:hover {
-background-color: #ebebeb;
+  background-color: #ebebeb;
 }
 
 .reservation-form input:focus {
-background-color: #e5e5e5;
+  background-color: #e5e5e5;
 }
-/* тоже не меняется цвет при фокусе */
+
 .button-search {
-color: #ffffff;
-font-family: "PT Sans", sans-serif;
-font-size: 21px;
-font-weight: 700;
-line-height: 26px;
-text-transform: uppercase;
-background-color: #81b3d2;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  background-color: #81b3d2;
 }
 
 .button-search.button:hover {
-background-color: #669ec0;
+  background-color: #669ec0;
 }
 
 .button-search.button:focus {
-	color: rgba(255, 255, 255, 0.3);
-	background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
 }
 
 .button-popup {
-color: #ffffff;
-font-family: "PT Sans", sans-serif;
-font-size: 21px;
-font-weight: 700;
-line-height: 26px;
-text-transform: uppercase;
-background-color: #766357;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  background-color: #766357;
 }
 
 .button-popup.button:hover,
 .button-popup.button:focus {
-background-color: #604e43;
+  background-color: #604e43;
 }
+
 .button-popup.button:focus {
-color:rgba(255, 255, 255, 0.3);
-background-color:  #503e33;
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
 }
 
 /* футер */
+
 .main-footer {
-background-color: #f9fbf6;
+  background-color: #f9fbf6;
 }
 
-.hashtag{
-color: #000000;
-font-family: "PT Sans",sans-serif;
-font-size: 21px;
-font-weight: 700;
-line-height: 26px;
-text-transform: uppercase;
-text-align: center;
+.hashtag {
+  color: #000000;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
 }
-
-.footer-social {
-text-align: center;
-}
-
 
 .footer-copyright {
-color: #000000;
-font-family: "PT Sans", sans-serif;
-font-size: 14px;
-font-weight: 400;
-line-height: 26px;
-text-transform: uppercase;
-text-align: center;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
 }
 
 /* каталог */
 
 .name-hotel {
-color: #000000;
-font-family: "PT Sans",sans-serif;
-font-size: 21px;
-font-weight: 700;
-line-height: 26px;
-text-transform: uppercase;
+  color: #000000;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
 }
 
 .name-hotel:hover {
-color: #81b3d2;
+  color: #81b3d2;
 }
 
 .name-hotel:focus {
-color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .details-hotel {
-color: #333333;
-font-family: "PT Sans",sans-serif;
-font-size: 14px;
-font-weight: 400;
-line-height: 21px;
-text-transform: uppercase;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
 }
 
-.more-button{
-color: #ffffff;
-font-family: "PT Sans",sans-serif;
-font-size: 14px;
-font-weight: 700;
-line-height: 21px;
-text-transform: uppercase;
-background-color: #81b3d2;
+.button-more {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  background-color: #81b3d2;
 }
 
-.booking-button{
-color: #ffffff;
-font-family: "PT Sans", sans-serif;
-font-size: 14px;
-font-weight: 700;
-line-height: 21px;
-text-transform: uppercase;
-background-color: #766357;
+.button-booking {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  background-color: #766357;
 }
 
-.more-button:hover {
-background-color: #669ec0;
+.button-more:hover {
+  background-color: #669ec0;
 }
 
-.more-button:focus {
-color: rgba(255, 255, 255, 0.3);
-background-color: #5496bd;
+.button-more:focus {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
 }
 
-.booking-button:hover {
-background-color: #604e43;
+.button-booking:hover {
+  background-color: #604e43;
 }
 
-.booking-button:focus {
-background-color: #503e33;
-color:rgba(255, 255, 255, 0.3);
+.button-booking:focus {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .rating span {
-color: #666666;
-font-family: "PT Sans", sans-serif;
-font-size: 14px;
-font-weight: 400;
-line-height: 21px;
-text-transform: uppercase;
-background-color: #f2f2f2;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  background-color: #f2f2f2;
 }
-
-
-
-

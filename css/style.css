@@ -27,7 +27,8 @@ a {
   text-align: center;
   vertical-align: middle;
   border: none;
-  font: inherit;
+	font: inherit;
+	text-transform: inherit;
 }
 
 .main-navigation ul, 
@@ -62,11 +63,10 @@ color: #766357;
 }
 
 .welcome-photo {
-	background-image: url("../img/background-photo.jpg"), url("../img/polygon.png");
-	/* не видно полигона  */
+	background-image: url("../img/polygon.png"), url("../img/background-photo.jpg");
   background-color: #87a7c8;
   background-repeat: no-repeat;
-  background-position: 50%;
+	background-position: bottom, 50%;
 }
 
 h1 {
@@ -218,11 +218,12 @@ h1 {
 .button-show {
 	background-color: transparent;
 	border: solid 2px #ffffff;
-	/* Не могу понять рочему не наследует свойства body  по шрифту и свойства секции по цвету */
+	color: #ffffff;
 }
 
 .filter-search input {
 	background-color: transparent;
+	color: #ffffff;
 }
 
 .search-result .result {
@@ -244,12 +245,17 @@ h1 {
 
 .type-result a{
 	color: rgba(0, 0, 0, 0.3);
-	border: 1px dotted  #81b3d2;
+	border-bottom:  1px dotted  #81b3d2;
 }
 
 .type-result a:hover {
 	color: #81b3d2;
-	border: 1px dotted #81b3d2;
+	border-bottom:  1px dotted #81b3d2;
+}
+
+.type-result a:focus {
+	color: #000000;
+	border: none;
 }
 
 .type-result a.active {
@@ -259,7 +265,8 @@ h1 {
 .name-hotel {
   font-size: 21px;
   font-weight: 700;
-  line-height: 26px;
+	line-height: 26px;
+	color: #000000;
 }
 
 .name-hotel:hover {
@@ -313,24 +320,3 @@ h1 {
   background-color: #f2f2f2;
 }
 /* сетка */
-html,
-body {
-	min-width: 1200px;
-	min-height: 2762px;
-}
-
-.main-header {
-min-height: 72px;
-margin-bottom: 61px;
-}
-
-.main-navigation {
-	display: flex;
-	flex-direction: column;
-	min-height: 72px;
-}
-
-.header-logo {
-	width: 140px;
-	height: 72px;
-}

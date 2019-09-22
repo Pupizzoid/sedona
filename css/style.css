@@ -9,7 +9,10 @@ body {
 	font-family: 'PT Sans', sans-serif;
 	text-transform: uppercase;
 	text-align: center;
-	/*  */
+	font-size: 14px;
+	font-weight: 400;
+	color: #000000;
+	background-color: #f2f2f2;
 }
 
 img {
@@ -27,19 +30,23 @@ a {
   font: inherit;
 }
 
-nav ul, 
-section ul,
-footer ul {
+.main-navigation ul, 
+.advantages ul,
+.main-footer ul {
 	list-style: none;
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 
 /* навигация */
 
 .site-navigation {
-  font-size: 14px;
   font-weight: 700;
   line-height: 26px;
-  color: #000000;
 }
 
 .site-navigation a:hover {
@@ -50,19 +57,19 @@ footer ul {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation a:active {
-  color: #766357;
+.site-navigation a.active {
+color: #766357;
 }
 
 .welcome-photo {
-  background-image: url("../img/background-photo.jpg");
+	background-image: url("../img/background-photo.jpg"), url("../img/polygon.png");
+	/* не видно полигона  */
   background-color: #87a7c8;
   background-repeat: no-repeat;
   background-position: 50%;
 }
 
 h1 {
-  color: #000000;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -72,8 +79,6 @@ h1 {
 
 .causes {
   color: #333333;
-  font-size: 14px;
-  font-weight: 400;
   line-height: 26px;
 }
 
@@ -81,28 +86,31 @@ h1 {
 .features-list h4 {
 	font-size: 21px;
 	line-height: 21px;
-	color: #000000;
 	font-weight: 700;
 }
 
 .advantages-list p {
-	font-size: 14px;
 	line-height: 21px;
-	color: #000000;
-	font-weight: 400;
 }
 
 .features-list p {
-	font-size: 14px;
 	line-height: 21px;
-	font-weight: 400;
 	color: #333333;
+}
+
+ .advantages-list li:first-child,
+ .advantages-list li:nth-child(2) {
+	background: #81b3d2;
+	color: #ffffff;
+}
+
+.advantages-list li:nth-child(n+3) {
+	background: #eeeeee;
 }
 
 /* бронирование */
 
 .reservation-info span {
-  color: #000000;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -110,14 +118,10 @@ h1 {
 
 .reservation-info {
   color: #333333;
-  font-size: 14px;
-  font-weight: 400;
   line-height: 24px;
 }
 
 .reservation-form {
-  color: #000000;
-  font-size: 14px;
   font-weight: 700;
   line-height: 26px;
 }
@@ -125,8 +129,6 @@ h1 {
 .reservation-form input {
   background-color: #f2f2f2;
   border: none;
-  color: #000000;
-  font-size: 14px;
   font-weight: 700;
   line-height: 26px;
 }
@@ -177,27 +179,84 @@ h1 {
 /* футер */
 
 .main-footer {
-  background-color: #f9fbf6;
+  background: rgba(255,255,255, 0.9);
 }
 
 .hashtag {
-  color: #000000;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
 }
 
 .footer-copyright {
-  color: #000000;
-  font-size: 14px;
-  font-weight: 400;
   line-height: 26px;
 }
 
 /* каталог */
 
+.filter-search form {
+	background-image: url("../img/filter-background.png");
+	background-color: #87a7c8;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	color: #ffffff;
+}
+
+.filter-search legend{
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 21px;
+}
+
+.filter-choice li {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+	list-style: none;
+}
+
+.button-show {
+	background-color: transparent;
+	border: solid 2px #ffffff;
+	/* Не могу понять рочему не наследует свойства body  по шрифту и свойства секции по цвету */
+}
+
+.filter-search input {
+	background-color: transparent;
+}
+
+.search-result .result {
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+.search-result p,
+.type-result li {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+}
+
+.type-result li {
+	list-style: none;
+}
+
+.type-result a{
+	color: rgba(0, 0, 0, 0.3);
+	border: 1px dotted  #81b3d2;
+}
+
+.type-result a:hover {
+	color: #81b3d2;
+	border: 1px dotted #81b3d2;
+}
+
+.type-result a.active {
+	color: #81b3d2;
+	border: none;
+}
 .name-hotel {
-  color: #000000;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -213,14 +272,11 @@ h1 {
 
 .details-hotel {
   color: #333333;
-  font-size: 14px;
-  font-weight: 400;
   line-height: 21px;
 }
 
 .button-more {
   color: #ffffff;
-  font-size: 14px;
   font-weight: 700;
   line-height: 21px;
   background-color: #81b3d2;
@@ -228,7 +284,6 @@ h1 {
 
 .button-booking {
   color: #ffffff;
-  font-size: 14px;
   font-weight: 700;
   line-height: 21px;
   background-color: #766357;
@@ -254,8 +309,28 @@ h1 {
 
 .rating span {
   color: #666666;
-  font-size: 14px;
-  font-weight: 400;
   line-height: 21px;
   background-color: #f2f2f2;
+}
+/* сетка */
+html,
+body {
+	min-width: 1200px;
+	min-height: 2762px;
+}
+
+.main-header {
+min-height: 72px;
+margin-bottom: 61px;
+}
+
+.main-navigation {
+	display: flex;
+	flex-direction: column;
+	min-height: 72px;
+}
+
+.header-logo {
+	width: 140px;
+	height: 72px;
 }

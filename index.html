@@ -7,7 +7,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="container">
 
     <header class="main-header">
       <nav class="main-navigation">
@@ -37,25 +37,27 @@
           Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
         </p>
         <h2 class="visually-hidden">Переимущества</h2>
+        <!-- вынесла этот список вперед, так как не могла декорировать первый элемент списка нумерованного
+        не затрагивая вложенного, возможно посоветуешь другой вариант? Я думала его вниз потом маргинами опустить -->
+        <ul class="features-list">
+          <li class="feature-item">
+            <h4>Жильё</h4>
+            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </li>
+          <li class="feature-item">
+            <h4>Еда</h4>
+            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          </li>
+          <li class="feature-item">
+            <h4>Сувениры</h4>
+            <p>Не только китайского, но и местного производства!</p>
+          </li>
+        </ul>
         <ol class="advantages-list">
           <li class="advantage-item">
             <h3>Настоящий городок</h3>
             <img src="img/city.jpg" alt="photo sedona city" width="800" height="256">
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <ul class="features-list">
-              <li class="feature-item">
-                <h4>Жильё</h4>
-                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-              </li>
-              <li class="feature-item">
-                <h4>Еда</h4>
-                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-              </li>
-              <li class="feature-item">
-                <h4>Сувениры</h4>
-                <p>Не только китайского, но и местного производства!</p>
-              </li>
-            </ul>
           </li>
           <li class="advantage-item">
             <h3>Там есть Мост дьявола</h3>
@@ -126,7 +128,7 @@
       </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <p class="hashtag">
         #visitSEDONA
       </p>

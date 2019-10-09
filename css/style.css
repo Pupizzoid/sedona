@@ -146,9 +146,8 @@ input[type="radio"].visually-hidden {
 	padding-top: 77px;
 	padding-bottom: 76px;
 	margin-bottom: 46px;
-
+	background-color: #d4e5ef;
 	background-image: url("../img/polygon.png"), url("../img/background-photo.jpg");
-	background-color: #87a7c8;
 	background-repeat: no-repeat;
 	background-position: bottom center, top -83px center;
 }
@@ -223,34 +222,36 @@ h1 {
 .item-text {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
+	align-items: center;
 
 	width: calc(100% / 3);
-
-	align-items: center;
+	padding-top: 21px;
+	padding-bottom: 39px;
 }
 
 .item-text::before {
 	counter-increment: advantages;
 	content: '— №'counter(advantages)'—';
-	margin-bottom: -14px;
+	/* margin-bottom: -14px; */
 }
 
 .item-text p {
 	width: 303px;
-	margin-top: 36px;
-	margin-bottom: -29px;
+	/* margin-top: 36px;
+	margin-bottom: -29px; */
 }
 
 .item-text h3 {
+	order: -1;
 	width: 160px;
-	margin-top: -44px;
-	margin-bottom: 30px;
+	/* margin-top: -44px;
+	margin-bottom: 30px; */
 }
-
+/* 
 .item-title {
 	order: -1;
-}
+} */
 
 .features-list {
 	display: flex;
@@ -301,18 +302,18 @@ h1 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	padding-top: 128px;
+	padding-bottom: 69px;
 }
 
 .feature-item h4 {
 	width: 120px;
 	margin-bottom: 10px;
-
-	text-align: center;
 }
 
 .feature-item p {
 	width: 300px;
-	margin-bottom: 83px;
 }
 
 .advantage-item.item-text {
@@ -391,6 +392,28 @@ h1 {
 
 	font-weight: 700;
 	line-height: 26px;
+}
+
+@keyframes lift-up {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-50px);
+	}
+	100% {
+		transform: translateY(-300px);
+	}
+}
+
+.reservation-form-hide {
+	display: none;
+	animation-name: lift-up;
+	animation-duration: 2s;
+}
+
+.reservation-form-show {
+	display: block;
 }
 
 .reservation-form input {
@@ -596,6 +619,7 @@ h1 {
 	z-index: 1;
 
 	border: none;
+	
 }
 
 .main-footer {
@@ -645,8 +669,7 @@ h1 {
 }
 
 .footer-social li {
-	margin-right: 5px;
-	margin-bottom: 5px;
+	margin-right: 6px;
 }
 
 .button-social:hover {
@@ -660,6 +683,7 @@ h1 {
 .button-social:focus path {
 	fill-opacity:  0.3;
 }
+
 .footer-copyright {
 	display: flex;
 	justify-content: center;
@@ -671,7 +695,7 @@ h1 {
 .footer-copyright a {
 	display: block;
 
-	padding-top: 7px;
+	padding-top: 8px;
 }
 
 .footer-copyright b {
@@ -709,11 +733,11 @@ h1 {
 	justify-content: space-between;
 
 	width: 100%;
-	margin-bottom: 21px;
-	padding: 0 70px;
+	margin-bottom: 23px;
+	padding: 0 70px 7px 70px;
 
-	background-image: url("../img/filter-background.png");
 	background-color: #87a7c8;
+	background-image: url("../img/filter-background.png");
 	background-repeat: no-repeat;
 	background-position: 50%;
 	color: #ffffff;
@@ -818,7 +842,7 @@ h1 {
 }
 
 .filter-range-title {
-	margin-bottom: 9px;
+	margin-bottom: 10px;
 	padding-top: 27px;
 
 	text-align: left;
@@ -871,7 +895,7 @@ h1 {
 
 .price-controls input {
 	width: 50px;
-	height: 38px;
+	height: 32px;
 	margin: 0;
 
 	color: inherit;
@@ -895,7 +919,7 @@ h1 {
 }
 
 .range-controls .bar {
-	width: 77%;
+	width: 79%;
 	height: 2px;
 
 	background: #ffffff;
@@ -924,13 +948,13 @@ h1 {
 }
 
 .range-toggle-max {
-	left: 77%;
+	left: 79%;
 }
 
 .button-transparent {
 	display: block;
 
-	margin-left: 84px;
+	margin-left: 82px;
 	padding: 6px 35px;
 
 	text-transform: uppercase;
@@ -1043,9 +1067,11 @@ h1 {
 }
 
 .hotel-info {
-	display: block;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 
-	min-width: 258px;
+	width: 258px;
 	margin-left: 30px;
 }
 
@@ -1089,7 +1115,7 @@ h1 {
 }
 
 .second-detail{
-	width: 142px;
+	width: 132px;
 }
 
 .first-detail {
@@ -1116,7 +1142,6 @@ h1 {
 
 .button-booking {
 	min-width: 142px;
-	margin-left: 2px;
 	background-color: #766357;
 } 
 
@@ -1177,7 +1202,7 @@ h1 {
 .rating span {
 	display: inline-block;
 	vertical-align: middle;
-	padding: 3px 13px;
+	padding: 3px 14px;
 
 	color: #666666;
 	line-height: 21px;

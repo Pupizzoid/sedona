@@ -184,6 +184,7 @@ h1 {
 
 	margin: 0;
 	margin-bottom: 50px;
+	margin-top: -2px;
 	padding: 0;
 
 	counter-reset: advantages;
@@ -227,31 +228,22 @@ h1 {
 
 	width: calc(100% / 3);
 	padding-top: 21px;
-	padding-bottom: 39px;
+	padding-bottom: 42px;
 }
 
 .item-text::before {
 	counter-increment: advantages;
 	content: '— №'counter(advantages)'—';
-	/* margin-bottom: -14px; */
 }
 
 .item-text p {
 	width: 303px;
-	/* margin-top: 36px;
-	margin-bottom: -29px; */
 }
 
 .item-text h3 {
 	order: -1;
 	width: 160px;
-	/* margin-top: -44px;
-	margin-bottom: 30px; */
 }
-/* 
-.item-title {
-	order: -1;
-} */
 
 .features-list {
 	display: flex;
@@ -396,24 +388,20 @@ h1 {
 
 @keyframes lift-up {
 	0% {
-		transform: translateY(0px);
+		opacity: 1;
 	}
 	50% {
-		transform: translateY(-50px);
+		opacity: 0.3;
 	}
 	100% {
-		transform: translateY(-300px);
+		opacity: 0;
 	}
 }
 
 .reservation-form-hide {
-	display: none;
+	opacity: 0;
 	animation-name: lift-up;
-	animation-duration: 2s;
-}
-
-.reservation-form-show {
-	display: block;
+	animation-duration: 1s;
 }
 
 .reservation-form input {
@@ -425,6 +413,14 @@ h1 {
 	line-height: 26px;
 }
 
+.input-error {
+	border: 2px solid red;
+}
+
+input:invalid {
+	border: 2px solid red;
+}
+
 .reservation-form input:hover {
 	background-color: #ebebeb;
 }
@@ -434,6 +430,8 @@ h1 {
 }
 
 .reservation-item {
+position: relative;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
@@ -457,12 +455,18 @@ h1 {
 	width: 346px;
 	height: 38px;
 	margin: 0;
+	padding-left: 14px;
+	padding-right: 38px;
 
 	text-transform: uppercase;
 	appearance: none;
 }
 
 .button-calendar {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+
 	width: 36px;
 	height: 38px;
 	padding: 0;
@@ -473,65 +477,51 @@ h1 {
 	background-color: transparent;
 }
 
-.button-calendar-1  {
-	position: absolute;
-	top: 55px;
-	left: 474px;
-}
-
-.button-calendar-2 {
-	position: absolute;
-	top:122px;
-	left: 474px;
-}
-
 .button-calendar svg {
 	fill: #cacaca;
 }
 
-.button-calendar svg:hover {
+.button-calendar:hover path {
 	fill: #000000;
 }
 
-.button-calendar svg:focus {
+.button-calendar:focus path {
 	fill: #81b3d2;
 }
-/* Не работает фокус */
+
+.quantity-adult {
+	width: 225px;
+}
+
+.quantity-child {
+	width: 176px;
+}
+
 .quantity-adult,
 .quantity-child {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+	align-items: center;
 
 	margin: 0;
-	margin-bottom: 54px;
+	margin-bottom: 55px;
+	margin-top: 13px;
 }
 
 .quantity-adult label {
 	display: inline;
-
-	margin-right: 41px;
-	margin-top: 20px;
 }
 
 .quantity-child label{
 	display: inline;
-
-	margin-right: 26px;
-	margin-top: 20px;
 }
 
 .number-adult {
 	position: relative;
-
-	margin-top: 12px;
-	margin-left: -5px;
 }
 
 .number-child {
 	position: relative;
-
-	margin-top: 12px;
-	margin-right: -4px;
 }
 
 
@@ -605,21 +595,24 @@ h1 {
 
 .map {
 	position: relative;
+
 	width: 100%;
 	margin: 0;
 	margin-bottom: -124px;
 }
 
 .map p {
+	position: absolute;
+	z-index: -1;
+
 	margin: 0;
+	min-height: 594px;
 }
 
 .map iframe {
-	position: relative;
-	z-index: 1;
+	z-index: 0;
 
 	border: none;
-	
 }
 
 .main-footer {
@@ -809,7 +802,7 @@ h1 {
 }
 
 .check {
-	margin-left: 40px;
+	padding-left: 40px;
 }
 
 .check-input:focus + .check-box {
@@ -828,6 +821,10 @@ h1 {
 
 .check-input:checked:disabled + .check-box {
 	background-image: url(../img/svg-sedona/checkbox-on-disabled.svg);
+}
+
+.check-input:hover + .check-box {
+	opacity: 0.9;
 }
 
 
@@ -994,7 +991,7 @@ h1 {
 }
 
 .result {
-	margin: auto;
+	align-self: center;
 
 	font-size: 21px;
 	font-weight: 700;
@@ -1127,7 +1124,7 @@ h1 {
 	display: inline-block;
 	vertical-align: top;
 
-	padding: 3px 17px;
+	padding: 4px 17px;
 	margin-top: 16px;
 
 	color: #ffffff;

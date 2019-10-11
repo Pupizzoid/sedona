@@ -93,15 +93,14 @@
         <h2 class="visually-hidden"> Форма бронирования</h2>
         <div class="reservation-info">
           <p class="reservation-info-title">Заинтересовались?</p>
-          <p>Укажите предполагаемые даты поездки,<br>
-          и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <p>Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в седоне</p>
           </div>
         <div class="modal">
           <button type="button" class="button-popup button">Поиск гостиницы в Седоне</button>
           <form class="reservation-form" action="https://echo.htmlacademy.ru" method="post">
-            <p class="reservation-item">
+            <p class="reservation-item arrive-item">
               <label for="arrive-date">Дата&nbsp;заезда:</label>
-              <input type="text" name="arrive-date" id="arrive-date" placeholder="24 апреля 2017" required>
+              <input class="input-arrive" type="text" name="arrive-date" id="arrive-date" placeholder="24 апреля 2017">
               <button type="button" class="button-calendar button-calendar-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
                   <title class="visually-hidden">Календарь</title>
@@ -110,9 +109,9 @@
                 </svg>
               </button>
             </p>
-            <p class="reservation-item">
+            <p class="reservation-item departure-item">
               <label for="departure-date">Дата&nbsp;выезда:</label>
-              <input type="text" name="departure-date" id="departure-date" placeholder="4 июля 2017" required>
+              <input class="input-departure" type="text" name="departure-date" id="departure-date" placeholder="4 июля 2017">
               <button type="button" class="button-calendar button-calendar-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
                   <title class="visually-hidden">Календарь</title>
@@ -125,7 +124,7 @@
               <label for="adult">Взрослые:</label>
               <div class="number-adult">
                 <button type="button" class="reduce button" aria-label="Уменьшить количество взрослых">-</button>
-                <input type="number" id="adult" min="1" max="100" step="1" name="adults" value="2" placeholder="2" required>
+                <input class="input-adult" type="number" id="adult" min="1" max="100" step="1" name="adults" value="2" placeholder="2" required>
                 <button type="button" class="increase button" aria-label="Увеличить количество взрослых">+</button>
               </div>
             </div>
@@ -133,7 +132,7 @@
               <label for="child">Дети:</label>
               <div class="number-child">
                 <button type="button" class="reduce button" aria-label="Уменьшить количество детей">-</button>
-                <input type="number" id="child" min="0" max="100" step="1" name="children" placeholder="0" value="0">
+                <input  class="input-child" type="number" id="child" min="0" max="100" step="1" name="children" placeholder="0" value="0">
                 <button type="button" class="increase button" aria-label="Увеличить количество детей">+</button>
               </div>
             </div>
@@ -180,21 +179,6 @@
         </a>
       </p>
     </footer>
-    <!-- <script>
-      var link = document.querySelector(".button-popup");
-      var popup = document.querySelector(".reservation-form");
-      var arrive = popup.querySelector("[name=arrive-date]");
-      var departure = popup.querySelector("[name=departure-date]");
-
-      link.addEventListener("click", function (evt) {
-      popup.classList.toggle("reservation-form-hide");
-      });
-
-      popup.addEventListener("submit", function (evt) {
-      if (!arrive.value || !departure.value) {
-      evt.preventDefault();
-      popup.classList.remove("input-error");
-      });
-    </script> -->
+    <script src="js/script.js"></script>
   </body>
 </html>

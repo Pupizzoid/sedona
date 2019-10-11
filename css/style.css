@@ -169,6 +169,7 @@ h1 {
 
 .points h1{
 	margin-bottom: 19px;
+	padding: 0 355px;
 }
 
 .points p {
@@ -404,21 +405,16 @@ h1 {
 	animation-duration: 1s;
 }
 
-.reservation-form input {
+.input-arrive,
+.input-child,
+.input-adult,
+.input-departure {
 	border: none;
 
 	background-color: #f2f2f2;
 
 	font-weight: 700;
 	line-height: 26px;
-}
-
-.input-error {
-	border: 2px solid red;
-}
-
-input:invalid {
-	border: 2px solid red;
 }
 
 .reservation-form input:hover {
@@ -447,7 +443,8 @@ position: relative;
 	margin-right: 20px;
 }
 
-.reservation-item input {
+.input-arrive,
+.input-departure{
 	position: relative;
 
 	display: block;
@@ -460,6 +457,24 @@ position: relative;
 
 	text-transform: uppercase;
 	appearance: none;
+}
+
+@keyframes shake {
+  0% {
+    left: -5px;
+  }
+  100% {
+    right: -5px;
+  }
+}
+
+.input-error {
+	position: relative;
+
+	animation: shake .1s linear;
+	animation-iteration-count: 3;
+
+	background-color:rgba(235, 0, 0, 0.1);
 }
 
 .button-calendar {
@@ -932,12 +947,14 @@ position: relative;
 	background: #ababab;
 	border: 8px solid #ffffff;
 	border-radius: 50%;
-	box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+	box-shadow: 0 3px 1px 0 rgba(255, 255, 255, 0.2);
 	cursor: pointer;
 }
 
 .range-toggle:hover {
-	background: #1c4f80;
+	width: 22px;
+	height: 22px;
+	box-shadow: 0 3px 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .range-toggle-min {

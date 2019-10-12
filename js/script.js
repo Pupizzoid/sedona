@@ -8,19 +8,27 @@ link.addEventListener("click", function (evt) {
 });
 
 popup.addEventListener("submit", function (evt) {
+	if (!departure.value) {
+		evt.preventDefault();
+		departure.classList.add("input-error");
+		departure.focus();
+	}
+
 	if (!arrive.value) {
 		evt.preventDefault();
 		arrive.classList.add("input-error");
 		arrive.focus();
-		arrive.classList.remove("input-error");
-		if(arrive.value){
-			departure.focus();
-		}
 	}
-	if (!departure.value) {
-		evt.preventDefault();
-		departure.classList.add("input-error");
-		arrive.focus();
+});
+
+arrive.addEventListener("keyup", function(evt){
+	if(arrive.value) {
 		arrive.classList.remove("input-error");
+	}
+});
+
+departure.addEventListener("keyup", function(evt){
+	if(departure.value) {
+		departure.classList.remove("input-error");
 	}
 });

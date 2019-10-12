@@ -12,7 +12,7 @@ body {
 	color: #000000;
 	background-color: #f2f2f2;
 
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'PT Sans', 'Arial',s sans-serif;
 	font-size: 14px;
 	font-weight: 400;
 }
@@ -79,7 +79,7 @@ input[type="radio"].visually-hidden {
 	box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
-/* навигация */
+/* index */
 
 .main-header {
 	position: relative;
@@ -127,11 +127,11 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation li:nth-child(3) {
-  margin-left: auto;
+	margin-left: auto;
 }
 
 .site-navigation a:hover {
-	 color: #81b3d2;
+	color: #81b3d2;
 }
 
 .site-navigation a:focus {
@@ -146,6 +146,7 @@ input[type="radio"].visually-hidden {
 	padding-top: 77px;
 	padding-bottom: 76px;
 	margin-bottom: 46px;
+
 	background-color: #d4e5ef;
 	background-image: url("../img/polygon.png"), url("../img/background-photo.jpg");
 	background-repeat: no-repeat;
@@ -405,18 +406,6 @@ h1 {
 	animation-duration: 1s;
 }
 
-.input-arrive,
-.input-child,
-.input-adult,
-.input-departure {
-	border: none;
-
-	background-color: #f2f2f2;
-
-	font-weight: 700;
-	line-height: 26px;
-}
-
 .reservation-form input:hover {
 	background-color: #ebebeb;
 }
@@ -426,7 +415,7 @@ h1 {
 }
 
 .reservation-item {
-position: relative;
+	position: relative;
 
 	display: flex;
 	justify-content: space-between;
@@ -444,7 +433,7 @@ position: relative;
 }
 
 .input-arrive,
-.input-departure{
+.input-departure {
 	position: relative;
 
 	display: block;
@@ -455,17 +444,23 @@ position: relative;
 	padding-left: 14px;
 	padding-right: 38px;
 
+	background-color: #f2f2f2;
+
 	text-transform: uppercase;
 	appearance: none;
+	border: none;
+
+	font-weight: 700;
+	line-height: 26px;
 }
 
 @keyframes shake {
-  0% {
-    left: -5px;
-  }
-  100% {
-    right: -5px;
-  }
+	0% {
+		left: -5px;
+	}
+	100% {
+		right: -5px;
+	}
 }
 
 .input-error {
@@ -473,8 +468,6 @@ position: relative;
 
 	animation: shake .1s linear;
 	animation-iteration-count: 3;
-
-	background-color:rgba(235, 0, 0, 0.1);
 }
 
 .button-calendar {
@@ -549,6 +542,12 @@ position: relative;
 
 	text-transform: uppercase;
 	text-align: center;
+	border: none;
+
+	background-color: #f2f2f2;
+
+	font-weight: 700;
+	line-height: 26px;
 }
 
 .reduce,
@@ -677,7 +676,9 @@ position: relative;
 }
 
 .footer-social li {
-	margin-right: 6px;
+	margin-right: 3px;
+	margin-left: 3px;
+	margin-top: 2px;
 }
 
 .button-social:hover {
@@ -727,9 +728,7 @@ position: relative;
 	fill: #bdbbbc;
 }
 
-
-/* каталог */
-
+/* catalog */
 
 .filter-search {
 	width: 100%;
@@ -742,7 +741,7 @@ position: relative;
 
 	width: 100%;
 	margin-bottom: 23px;
-	padding: 0 70px 7px 70px;
+	padding: 27px 70px 6px 70px;
 
 	background-color: #87a7c8;
 	background-image: url("../img/filter-background.png");
@@ -772,9 +771,8 @@ position: relative;
 .filter-choice legend {
 	width: 100%;
 	padding: 0;
-	padding-top: 28px;
 	margin: 0;
-	margin-bottom: 24px;
+	margin-bottom: 25px;;
 
 	text-align: left;
 }
@@ -818,6 +816,7 @@ position: relative;
 
 .check {
 	padding-left: 40px;
+	cursor: pointer;
 }
 
 .check-input:focus + .check-box {
@@ -855,7 +854,6 @@ position: relative;
 
 .filter-range-title {
 	margin-bottom: 10px;
-	padding-top: 27px;
 
 	text-align: left;
 }
@@ -994,7 +992,7 @@ position: relative;
 	align-items: center;
 
 	width: 100%;
-	margin-bottom: 19px;
+	margin-bottom: 21px;
 	padding: 0 72px;
 }
 
@@ -1091,12 +1089,13 @@ position: relative;
 
 .hotel-info h3 {
 	position: relative;
-	top: -5px;
+	top: -4px;
 
 	margin: 0;
 	margin-bottom: 5px;
 
 	text-align: left;
+	word-spacing: 2px;
 
 	color: #000000;
 
@@ -1134,14 +1133,14 @@ position: relative;
 
 .first-detail {
 	width: 110px;
-} 
+}
 
- .button-more,
+.button-more,
 .button-booking {
 	display: inline-block;
 	vertical-align: top;
 
-	padding: 4px 17px;
+	padding: 3px 17px;
 	margin-top: 16px;
 
 	color: #ffffff;
@@ -1157,7 +1156,7 @@ position: relative;
 .button-booking {
 	min-width: 142px;
 	background-color: #766357;
-} 
+}
 
 .button-more:hover {
 	background-color: #669ec0;
